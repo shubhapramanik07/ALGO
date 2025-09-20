@@ -6,20 +6,21 @@
 
 
 # using two pointers..........#
-def bs(arr,f,s):
+def bubble_arr(arr,first,second):
     n = len(arr)
-    while s < n:    # loop until second pointer reaches end
-        if arr[f] > arr[s]:
-            arr[f], arr[s] = arr[s], arr[f] # swap if needed
-        f+=1
-        s+=1
+    while second < n:    # loop until second pointer reaches end
+        if arr[first] > arr[second]:
+            arr[first], arr[second] = arr[second], arr[first] # swap if needed
+        first += 1
+        second += 1
     return arr
 
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n-1):
-        bs(arr,0,1)
+        bubble_arr(arr,0,1)
     return arr
+
 
 arr = [26,2,65,1,99,6,32]
 bubble_sort(arr)
