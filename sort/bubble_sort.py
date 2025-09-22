@@ -33,4 +33,16 @@ print(arr)
 
 #*  tc= O(n*(n-1)) = O(n^2) because of nested loops and it is not dependent on the order of elements here the loops will run n*(n-1)/2 times so it is O(n^2)
 
-# for the best case ,,,TC = O(n) & SC = O(1) 
+#? for the best case ,,,TC = O(n) & SC = O(1) 
+
+
+# *another easy way to solve the problem
+
+# arr = [26,2,65,1,99,6,32]
+
+# n = len(arr)
+# for i in range(n-1):
+#     for j in range(n-i-1):
+#         if arr[j]>arr[j+1]:
+#             arr[j],arr[j+1] = arr[j+1],arr[j]
+# print(arr)
