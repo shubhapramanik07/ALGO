@@ -1,0 +1,3 @@
+#? in interviews they generally ask about this sorting algorithm how it works in the best case and how in the worst case....
+
+len
