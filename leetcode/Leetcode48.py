@@ -3,22 +3,22 @@
 matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 rows = len(matrix)
 cols = len(matrix[0])
-results = [[0]*rows for _ in range(cols)]
+rotated_matrix = [[0]*rows for _ in range(cols)]
 
 for i in range(rows):
     for j in range(cols):
-        results[j][rows-1-i] = matrix[i][j]
-print(results)
+        rotated_matrix[j][rows-1-i] = matrix[i][j]
+print(rotated_matrix)
 print("**************************************")
-for i in range(len(results)):
-    for j in range(len(results[0])):
-        print(results[i][j],end=" ")
+for i in range(len(rotated_matrix)):
+    for j in range(len(rotated_matrix[0])):
+        print(rotated_matrix[i][j],end=" ")
     print()
 print("**************************************")
 # time complexity: O(n^2) where n is the number of rows or columns in the matrix
 # space complexity: O(n^2) as we are using an extra matrix to store the result
-#* /****************************************/
-#? optimal solution without using extra space   
+# ----------------------------------------
+#? optimal solution: rotate the matrix in place without using extra space (modifies the original matrix)
 # step 1: transpose the matrix
 n = len(matrix)
 for i in range(0,n-1):
@@ -40,6 +40,12 @@ for i in range(n):
     #     right -= 1
 
 print(matrix)
+print("**************************************")
+for i in range(len(matrix)):
+    for j in range(len(matrix[0])):
+        print(matrix[i][j], end=" ")
+    print()
+print("**************************************")
 
 
 # time complexity: O(n^2) + O(n^2) = O(n^2) where n is the number of rows or columns in the matrix
