@@ -39,10 +39,12 @@ for i in range(n):
     #     left += 1
     #     right -= 1
 
-
-
 print(matrix)
 
 
 # time complexity: O(n^2) + O(n^2) = O(n^2) where n is the number of rows or columns in the matrix
 # space complexity: O(1) as we are not using any extra space
+
+
+
+#* /****************************************/
