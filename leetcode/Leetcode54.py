@@ -61,6 +61,13 @@ if __name__ == "__main__":
     ]
     for mat in examples:
         print(f"matrix={mat} -> spiral={spiralOrder(mat)}")
+    # Expected outputs:
+    # matrix=[[1, 2, 3], [4, 5, 6], [7, 8, 9]] -> spiral=[1, 2, 3, 6, 9, 8, 7, 4, 5]
+    # matrix=[[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]] -> spiral=[1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
+    # matrix=[[1]] -> spiral=[1]
+    # matrix=[] -> spiral=[]
+    # matrix=[[1], [2], [3], [4]] -> spiral=[1, 2, 3, 4]
+    
 
 
 # time complexity: O(m*n) coz we visit each element once where m and n are dimensions of matrix 
