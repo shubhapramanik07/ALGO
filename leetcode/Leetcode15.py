@@ -5,22 +5,22 @@
 
 
 
-# nums = [-1, 0, 1, 2, -1, -4]
+nums = [-1, 0, 1, 2, -1, -4]
 
-# def threeSum(nums):
-#     n = len(nums)
-#     my_set = set()
-#     for i in range(n):
-#         for j in range(n):
-#             for k in range(n):
-#                 if i != j and j != k and i != k:
-#                     if nums[i] + nums[j] + nums[k] == 0:
-#                         temp = tuple(sorted([nums[i], nums[j], nums[k]]))
-#                         my_set.add(temp)
-#     return [list(t) for t in my_set]
+def threeSum(nums):
+    n = len(nums)
+    my_set = set()
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+                if i != j and j != k and i != k:
+                    if nums[i] + nums[j] + nums[k] == 0:
+                        temp = tuple(sorted([nums[i], nums[j], nums[k]]))
+                        my_set.add(temp)
+    return [list(t) for t in my_set]
 
 
-# print(threeSum(nums))
+print(threeSum(nums))
 
 # Output: [[-1, -1, 2], [-1, 0, 1]]
 #? Time complexity is O(n^3) due to the three nested loops iterating through the array.
@@ -33,19 +33,19 @@
 
 
 
-# def threeSums(nums):
-#     n = len(nums)        
-#     k_set = set()
+def threeSums(nums):
+    n = len(nums)        
+    k_set = set()
 
-#     for i in range(n):
-#         my_set = set()
-#         for j in range(i+1,n):
-#             k = -(nums[i] + nums[j])
-#             if k in my_set:
-#                 temp = [nums[i], nums[j], k]
-#                 temp.sort()
-#                 k_set.add(tuple(temp))
-#             my_set.add(nums[j])      # Always update after checking
+    for i in range(n):
+        my_set = set()
+        for j in range(i+1,n):
+            k = -(nums[i] + nums[j])
+            if k in my_set:
+                temp = [nums[i], nums[j], k]
+                temp.sort()
+                k_set.add(tuple(temp))
+            my_set.add(nums[j])      # Always update after checking
 
 
 
@@ -53,18 +53,16 @@
 
 # # We cannot add a list to a set because sets don't allow mutable elements, so we add tuples which are immutable to store unique triplets
             
-#     return [list(t) for t in k_set] # Convert unique triplets (tuples) back to list form
+    return [list(t) for t in k_set] # Convert unique triplets (tuples) back to list form
 
-# nums = [-1, 0, 1, 2, -1, -4]
-# print(threeSums(nums))
+nums = [-1, 0, 1, 2, -1, -4]
+print(threeSums(nums))
 
 #? Time complexity is O(n^2) because we have a nested loop where the outer loop runs n times and the inner loop runs up to n times in the worst case.
 #? Space complexity is O(k) where k is the number of unique triplets found, as they are stored in a set before being converted to a list for the final output. Additionally, the inner set used for checking complements also takes up space, but it is temporary and resets with each iteration of the outer loop.
 #* -----------------------------------------
 
-# ? best optimal solution starts here.........................................
-
-
+# / here is the optimal solution for the same problem.....................................
 
 def threeSumOptimal(nums):
     
