@@ -38,6 +38,7 @@
 # * .........................................
 # * .........................................
 #? Binary Search Applications:
+
 # 1. Finding an element in a sorted array.
 # 2. Finding the first or last occurrence of an element in a sorted array.
 # 3. Finding the square root of a number.
