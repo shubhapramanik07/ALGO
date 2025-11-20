@@ -3,28 +3,28 @@
 #? Binary Search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one.
 #*Easy Problem............................  
 
-# arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# target = 7
-# # the given array should be sorted for binary search to work correctly. otherwise, we have to sort it first.
-# def binary_search(arr, target):
-#     n = len(arr)
-#     start = 0
-#     end = n-1
-#     while start <= end:
-#         mid = (start+end)//2    
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+target = 7
+# the given array should be sorted for binary search to work correctly. otherwise, we have to sort it first.
+def binary_search(arr, target):
+    n = len(arr)
+    start = 0
+    end = n-1
+    while start <= end:
+        mid = (start+end)//2    
 
-#         if target == arr [mid]:
-#             return mid
-#         elif target < arr[mid]:
-#             end = mid - 1
-#         else:
-#             start = mid + 1
-#     return -1
-# result = binary_search(arr, target)
-# if result != -1:
-#     print(f"Element found at index {result}")
-# else:
-#     print("Element not found in the array.")
+        if target == arr [mid]:
+            return mid
+        elif target < arr[mid]:
+            end = mid - 1
+        else:
+            start = mid + 1
+    return -1
+result = binary_search(arr, target)
+if result != -1:
+    print(f"Element found at index {result}")
+else:
+    print("Element not found in the array.")
 
 # this was the basic implementation of binary search algorithm. using while loop.
 
